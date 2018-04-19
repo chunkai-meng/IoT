@@ -42,20 +42,20 @@ sudo i2cdetect -y 1
 4. Connect ******* to port ********
 
 #### Setting up development environment Pi
-+ Down load from github
++ Download the latest code from github
 ```
+git clone https://github.com/chunkai-meng/IoT.git
 ```
 
-+ Copy the latest code
-    ```
-    # Open a terminal connect to Pi
-    ssh -t pi@<ip> "cd ~/AS1/PubSub; bash"
-    # Open another terminal upload code to Pi
-    cd <PubSub's Parent Directory>
-    scp -r PubSub pi@<ip>:~/AS1/PubSub
-    ```
-+ Python for IBM Watson IoT Platform
-Install the latest version of the library with pip
++ Or copy the code to Pi
+```
+# Open a terminal connect to Pi
+ssh -t pi@<ip> "cd ~/AS1/PubSub; bash"
+# Open another terminal upload code to Pi
+cd <PubSub's Parent Directory>
+scp -r PubSub pi@<ip>:~/AS1/PubSub
+```
++ Install the latest version of the Python library for IBM Watson IoT Platform
 ```
 [root@localhost ~]# pip install ibmiotf
 ```
@@ -89,9 +89,9 @@ Install the latest version of the library with pip
 ![image](Media/CardSource.png)
 
 - Run `Pub.py` in the terminal that connected to Pi
-    ```
-    python ~/AS1/Pub.py
-    ```
+```
+python ~/AS1/Pub.py
+```
     - **Optional:** You can edit `Pub.py` to change the event name or the number of message sent to the cloud.
     ```py
     event = "event"
@@ -104,8 +104,8 @@ Install the latest version of the library with pip
     ![image](Media/Dashboard.png)
 
 - Run `Sub.py` in another terminal that connected to Pi
-    ```
-    python ~/AS1/Sub.py
-    ```
+```
+python ~/AS1/Sub.py
+```
     - You will see some output showing the received messages
     - Also you will see the output shown on the Display.
